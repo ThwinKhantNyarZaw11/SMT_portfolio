@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Design System Build - [Your Name]</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #305a8b 0%, #2d3c67 50%, #171230 100%);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+  <div class="container mx-auto px-4 py-16">
+    <a href="../index.html" class="inline-flex items-center text-purple-200 hover:text-purple-300 mb-8">
+      ← Back to Portfolio
+    </a>
+
+    <article class="max-w-5xl mx-auto">
+      <h1 class="text-5xl font-bold mb-8">Design System Build</h1>
+
+      <div class="glass-card p-8 rounded-xl shadow-lg">
+        <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+        <p class="text-lg mb-6">
+          Developed a comprehensive design system for a cross-functional SaaS platform to ensure UI consistency, improve handoffs, and accelerate development. The system supported both light and dark themes, and was built for scalability across web and mobile.
+        </p>
+
+        <h3 class="text-xl font-bold mb-3">Key Highlights</h3>
+        <ul class="list-disc list-inside text-purple-200 mb-6 space-y-2">
+          <li>Created and documented over 50 reusable components with auto layout</li>
+          <li>Defined design tokens for spacing, color, typography, and elevation</li>
+          <li>Set accessibility color contrast standards (AA & AAA)</li>
+          <li>Established naming conventions and versioning guidelines</li>
+          <li>Integrated the system with Storybook for dev-design alignment</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3">Tools Used</h3>
+        <ul class="list-disc list-inside text-purple-200 mb-6 space-y-2">
+          <li>Figma – Component library and design tokens</li>
+          <li>Zeroheight – Design documentation</li>
+          <li>Storybook – Developer preview and syncing</li>
+          <li>Notion – Governance, feedback tracking, and changelogs</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3">Impact</h3>
+        <ul class="list-disc list-inside text-purple-200 mb-6 space-y-2">
+          <li>Reduced design time by 30% across teams</li>
+          <li>Improved UI consistency and accessibility in all new features</li>
+          <li>Adopted by 5 product teams in the organization</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3">Demo & Files</h3>
+        <p class="text-purple-200">
+          📁 View in Figma: <a href="#" class="underline hover:text-purple-300">Design System Library</a><br/>
+          📄 Documentation: <a href="#" class="underline hover:text-purple-300">Read on Zeroheight</a>
+        </p>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

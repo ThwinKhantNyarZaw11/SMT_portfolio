@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Swe Mon Thu - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 1000;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #305a8b 0%, #2d3c67 50%, #171230 100%);
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .profile-img {
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        .mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+    <div class="flex justify-center pt-4 fixed w-full top-0 z-50">
+        <nav class="glass-nav rounded-full px-8 py-3 w-full max-w-2xl mx-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-xl font-bold"> Swe Mon Thu</a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-sky-200 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-sky-200 transition-colors">About</a>
+                    <a href="#projects" class="hover:text-sky-200 transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-sky-200 transition-colors">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-20 left-4 right-4 hidden flex-col glass-card rounded-lg p-4 z-40">
+        <a href="#home" class="py-2 px-4 hover:bg-white/10 rounded transition-colors">Home</a>
+        <a href="#about" class="py-2 px-4 hover:bg-white/10 rounded transition-colors">About</a>
+        <a href="#projects" class="py-2 px-4 hover:bg-white/10 rounded transition-colors">Projects</a>
+        <a href="#contact" class="py-2 px-4 hover:bg-white/10 rounded transition-colors">Contact</a>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center px-4 gradient-bg">
+            <div class="flex flex-col md:flex-row items-center gap-10 glass-card p-10 rounded-2xl backdrop-blur-sm shadow-lg max-w-4xl mx-auto">
+                
+                <!-- Profile Image -->
+                <div class="flex justify-center md:justify-start">
+                    <img src="./assets/Swe Mon Thu.jpg"
+                         alt="Swe Mon Thu"
+                         class="w-48 h-48 rounded-full object-cover border-4 border-purple-200 shadow-md">
+                </div>
+                
+                <!-- Info Section -->
+                <div class="text-center md:text-left">
+                    <h1 class="text-5xl font-bold mb-4 text-white"> Swe Mon Thu</h1>
+                    <p class="text-xl mb-4 text-white">Product Designer | Freelancer</p>
+                    <p class="text-lg text-purple-200">Global VIVID Electronic Company Ltd</p>
+                </div>
+        
+            </div>
+        </section>
+        
+
+        <!-- About Section -->
+        <section id="about" class="min-h-screen flex items-center justify-center px-4 py-20">
+            <div class="max-w-3xl">
+                <h2 class="text-4xl font-bold mb-8 text-center">About Me</h2>
+                <p class="text-lg leading-relaxed">
+                    I’m a passionate Product Designer focused on creating intuitive, user-centered digital experiences that blend function and emotion. With a strong foundation in UX/UI design, prototyping, and design systems, I collaborate across teams to turn complex problems into elegant, accessible solutions. Every product I design is guided by real user insight, business goals, and pixel-perfect execution.</div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="min-h-screen px-4 py-20 relative">
+            <div class="absolute inset-0 z-0">
+                <img src="./assets/img1.jpg" 
+                     alt="Project Background" 
+                     class="w-full h-full object-cover opacity-20">
+            </div>
+            <div class="relative z-10">
+                <h2 class="text-4xl font-bold mb-12 text-center">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            
+                    <a href="projects/mobile-app-redesign.html" class="project-card rounded-xl p-6 hover:bg-white/20 transition">
+                        <h3 class="text-xl font-bold mb-4">Mobile App Redesign</h3>
+                        <p class="text-purple-200">Revamped the UI/UX of a lifestyle app, boosting usability and engagement by 40%</p>
+                    </a>
+            
+                    <a href="projects/design-system-build.html" class="project-card rounded-xl p-6 hover:bg-white/20 transition">
+                        <h3 class="text-xl font-bold mb-4">Design System Build</h3>
+                        <p class="text-purple-200">Created scalable design tokens and reusable components across multiple platforms</p>
+                    </a>
+            
+                    <a href="projects/user-research-sprint.html" class="project-card rounded-xl p-6 hover:bg-white/20 transition">
+                        <h3 class="text-xl font-bold mb-4">User Research Sprint</h3>
+                        <p class="text-purple-200">Conducted usability testing and interviews to guide product roadmap decisions</p>
+                    </a>
+            
+                    <a href="projects/ecommerce-ui.html" class="project-card rounded-xl p-6 hover:bg-white/20 transition">
+                        <h3 class="text-xl font-bold mb-4">E-Commerce UI Design</h3>
+                        <p class="text-purple-200">Designed high-converting shopping flows and mobile-first product pages</p>
+                    </a>
+            
+                    <a href="projects/prototyping-interactions.html" class="project-card rounded-xl p-6 hover:bg-white/20 transition">
+                        <h3 class="text-xl font-bold mb-4">Prototyping & Microinteractions</h3>
+                        <p class="text-purple-200">Built interactive Figma prototypes with animated transitions and feedback cues</p>
+                    </a>
+            
+                    <a href="projects/saas-dashboard-ui.html" class="project-card rounded-xl p-6 hover:bg-white/20 transition">
+                        <h3 class="text-xl font-bold mb-4">SaaS Dashboard UI</h3>
+                        <p class="text-purple-200">Designed a modular analytics dashboard with user role-based customization</p>
+                    </a>
+            
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="min-h-screen flex items-center justify-center px-4 py-20">
+            <div class="text-center glass-card p-10 rounded-2xl backdrop-blur-sm shadow-lg max-w-3xl">
+                <h2 class="text-4xl font-bold mb-8">Contact Me</h2>
+                <div class="space-y-4">
+                    <p class="text-lg">
+                        <span class="font-bold">Email:</span>
+                        <a href="mailto:swemonthu.dr1991@gmail.com" class="text-purple-200 hover:text-purple-300">swemonthu.dr1991@gmail.com</a>
+                    </p>
+                    <p class="text-lg">
+                        <span class="font-bold">Phone:</span>
+                        <a href="tel:09-581-709-06" class="text-purple-200 hover:text-purple-300">09-581-709-06</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
